@@ -10206,7 +10206,6 @@ document.addEventListener('DOMContentLoaded', validateForm);
                     trigger: ".questions__list",
                     start: "-90% top",
                     end: "110% top",
-                    markers: true
                 }
             });
             gsap.from(".faq .faq__title", {

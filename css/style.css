@@ -3060,7 +3060,7 @@ ol li::before {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  z-index: 10
+  z-index: 4;
 }
 .button-to-top .slider-button-1 {
   background-color: var(--green);

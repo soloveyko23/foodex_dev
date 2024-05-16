@@ -10199,12 +10199,12 @@ document.addEventListener('DOMContentLoaded', validateForm);
             gsap.from(".question", {
                 x: -50,
                 opacity: 0,
-                duration: .5,
+                duration: .3,
                 ease: "power2.inOut",
-                stagger: .2,
+                stagger: .1,
                 scrollTrigger: {
                     trigger: ".questions__list",
-                    start: "-50% top",
+                    start: "-20% top",
                     end: "110% top"
                 }
             });

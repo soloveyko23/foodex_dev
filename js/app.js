@@ -10200,7 +10200,6 @@ document.addEventListener('DOMContentLoaded', validateForm);
                 x: -50,
                 opacity: 0,
                 duration: .5,
-                delay: .3,
                 ease: "power2.inOut",
                 stagger: .2,
                 scrollTrigger: {

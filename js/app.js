@@ -10204,7 +10204,7 @@ document.addEventListener('DOMContentLoaded', validateForm);
                 stagger: .1,
                 scrollTrigger: {
                     trigger: ".questions__list",
-                    start: "-100% top",
+                    start: "-70% top",
                     end: "110% top",
                     markers: true
                 }

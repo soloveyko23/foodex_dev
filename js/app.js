@@ -10205,7 +10205,8 @@ document.addEventListener('DOMContentLoaded', validateForm);
                 scrollTrigger: {
                     trigger: ".questions__list",
                     start: "-100% top",
-                    end: "110% top"
+                    end: "110% top",
+                    markers: true
                 }
             });
             gsap.from(".faq .faq__title", {

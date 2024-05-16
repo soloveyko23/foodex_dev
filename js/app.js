@@ -10191,8 +10191,8 @@ document.addEventListener('DOMContentLoaded', validateForm);
                 ease: "power2.inOut",
                 stagger: .2,
                 scrollTrigger: {
-                    trigger: ".faq",
-                    start: "-50% top",
+                    trigger: ".questions__list",
+                    start: "-90% top",
                     end: "110% top"
                 }
             });
@@ -10204,7 +10204,7 @@ document.addEventListener('DOMContentLoaded', validateForm);
                 stagger: .1,
                 scrollTrigger: {
                     trigger: ".questions__list",
-                    start: "-100% top",
+                    start: "-90% top",
                     end: "110% top",
                     markers: true
                 }

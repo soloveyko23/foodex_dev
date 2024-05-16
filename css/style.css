@@ -7521,9 +7521,7 @@ ol li::before {
   gap: .375rem;
   margin-bottom: 4px
 }
-.program-page__tabs .program-prices__slide .slide__top p {
-  margin-bottom: 4px
-}
+
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0
 }

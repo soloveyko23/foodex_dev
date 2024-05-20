@@ -5,8 +5,15 @@
   --gray: #F9F8F8;
   --green: #33CC99;
   --green-dark: #2FBF8F;
-  --red: #E23333
+  --red: #E23333;
 }
+
+@media (max-width: 1400px) and (min-width: 992px){
+    :root {
+      font-size: 13px;
+    }
+}
+
 * {
   padding: 0;
   margin: 0;

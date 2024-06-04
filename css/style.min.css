@@ -31,6 +31,10 @@
       max-width: 20%;
       height: auto;
     }
+    .slider-button-2 svg {
+      max-width: 20%;
+      height: auto;
+    }
     .hero__video-action svg {
       max-width: 60%;
     }
@@ -3221,8 +3225,8 @@ ol li::before {
       flex: 0 1 300px;
     } */
     .page {
-      padding-top: 6rem !important;
     }
+    padding-top: 6rem !important;
 }
 @media (max-width:61.99875em) {
   .header__location {

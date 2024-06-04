@@ -668,13 +668,17 @@ textarea {
     font-size: .9375rem
   }
 }
-@media (min-width:47.99875em) {
+@media (max-width: 100rem) and (min-width:61.9988rem) {
   .options-2 .options__label {
-    min-height: 3.25rem;
-    padding: .625rem 2rem
+    min-height: 2.5rem;
+    padding: .625rem 1.5rem
+  }
+  .options-2 .options__text i svg {
+    width: 1rem;
+    height: 1rem;
   }
 }
-@media (max-width:47.99875em) {
+@media (max-width:61.9988rem) {
   .options-2 .options__label {
     min-height: 2.875rem;
     padding: .625rem 1.5rem
@@ -3131,6 +3135,11 @@ ol li::before {
   justify-content: space-between;
   gap: 1.5rem
 }
+@media (max-width: 1440px) and (min-width: 992px){
+    .header__actions {
+      flex: 0 1 300px;
+    }
+}
 @media (max-width:61.99875em) {
   .header__location {
     padding: 1rem;
@@ -4135,15 +4144,16 @@ ol li::before {
     border-radius: .625rem
   }
 }
-@media (min-width:81.25em) {
+@media (min-width:100rem) {
   .get-in-touch__image img {
     min-height: 31.375rem
   }
 }
-@media (min-width:23.4375em) and (max-width:81.25em) {
+@media (min-width:23.4375em) and (max-width:100rem) {
   @supports (min-height:clamp(21.875rem ,18.0236486486rem + 16.4324324324vw ,31.375rem)) {
     .get-in-touch__image img {
-      min-height: clamp(21.875rem ,18.0236486486rem + 16.4324324324vw ,31.375rem)
+      min-height: clamp(21.875rem ,18.0236486486rem + 16.4324324324vw ,31.375rem);
+      height: clamp(21.875rem ,18.0236486486rem + 16.4324324324vw ,31.375rem)
     }
   }
   @supports not (min-height:clamp(21.875rem ,18.0236486486rem + 16.4324324324vw ,31.375rem)) {
@@ -4241,6 +4251,25 @@ ol li::before {
   transition: opacity .8s ease 1s,background-color .3s ease;
   opacity: 0
 }
+.how-it-works__slider {
+  position: relative;
+}
+.how-it-works__slider::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10rem;
+  z-index: 5;
+  height: 100%;
+  transition: all 0.3s;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+.how-it-works.last-slide-active .how-it-works__slider::before {
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+}
 @media (min-width:47.99875em) {
   .how-it-works__parallax-item {
     position: absolute;
@@ -4265,13 +4294,13 @@ ol li::before {
     padding-right: 1rem
   }
 }
-@media (min-width:47.99875em) {
+/* @media (min-width:47.99875em) {
   .how-it-works__slider .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 1rem
   }
-}
+} */
 .how-it-works__slide {
   position: relative;
   transition: all .3s
@@ -4637,15 +4666,42 @@ ol li::before {
   overflow: auto;
   white-space: nowrap
 }
+
+
 @media (max-width:61.99875em) {
   .reviews .tabs__navigation {
     margin-right: -1rem;
     padding-right: 1rem
   }
 }
-@media (min-width:75em) {
+.reviews__slider.last-slide-active::before {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (min-width:100rem) {
   .reviews:not(.reviews-about) .reviews__slider {
     width: calc(100vw - (100vw - 1270px)/ 2);
+    padding-right: 1rem
+  }
+  .reviews__slider {
+    position: relative;
+  }
+  .reviews__slider::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5rem;
+    z-index: 5;
+    height: 100%;
+    transition: all 0.3s;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+
+  }
+}
+@media (max-width:100rem) and (min-width: 75em) {
+  .reviews:not(.reviews-about) .reviews__slider {
+    width: calc(100vw - (100vw - 61vw)/ 2);
     padding-right: 1rem
   }
 }
@@ -6349,7 +6405,7 @@ ol li::before {
   }
 }
 .programs-main {
-  background-color: var(--black2)
+  background-color: #202322;
 }
 @media (min-width:81.25em) {
   .programs-main {
@@ -6544,6 +6600,24 @@ ol li::before {
 .programs-main__table .dish-schedule__slider {
   position: relative
 }
+
+.programs-main__table .dish-schedule__slider::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5rem;
+  z-index: 5;
+  height: 100%;
+  transition: all 0.3s;
+  background: linear-gradient(90deg, rgba(34,39,37,0) 0%, rgba(34,39,37,1) 100%);
+}
+
+.dish-schedule.last-slide-active .dish-schedule__slider::before {
+  opacity: 0;
+  pointer-events: none;
+}
+
 @media (min-width:61.99875em) {
   .programs-main__table .dish-schedule__slider {
     margin-right: -3.25rem;
@@ -6735,7 +6809,7 @@ ol li::before {
 }
 @media (min-width:61.99875em) {
   .programs-main__table .dish-schedule__table {
-    background-color: rgba(25,28,26,.55);
+    background-color: rgba(28, 31, 30, 55);
     padding: 2rem;
     border-radius: 1.25rem
   }

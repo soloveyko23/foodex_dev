@@ -9259,20 +9259,36 @@ document.addEventListener('DOMContentLoaded', validateForm);
                         320: {
                             slidesPerView: 1.01,
                             spaceBetween: 12,
+                            slidesPerGroup: 1.01,
                             grid: {
                                 rows: 2
                             }
                         },
                         480: {
                             slidesPerView: 2,
-                            spaceBetween: 16
+                            spaceBetween: 16,
+                            slidesPerGroup: 2
                         },
                         992: {
                             slidesPerView: 2.1,
-                            spaceBetween: 16
+                            spaceBetween: 16,
+                            slidesPerGroup: 2.1
                         }
                     },
-                    on: {}
+                    on: {
+                      slideChange: function () {
+                        const swiper = this;
+                        const parentElement = swiper.el.closest('.dish-schedule');
+                  
+                        if (parentElement) {
+                          parentElement.classList.remove('last-slide-active');
+                  
+                          if (swiper.activeIndex >= swiper.slides.length - swiper.params.slidesPerView) {
+                            parentElement.classList.add('last-slide-active');
+                          }
+                        }
+                      }
+                  }
                 });
                 new swiper_core_Swiper(".reviews__tab .reviews__slider", {
                     modules: [ Navigation, Pagination ],
@@ -9303,7 +9319,21 @@ document.addEventListener('DOMContentLoaded', validateForm);
                             spaceBetween: 16
                         }
                     },
-                    on: {}
+                    on: {
+                      slideChange: function () {
+                        const swiper = this;
+                        const parentElement = swiper.el.closest('.reviews__slider');
+                  
+                        if (parentElement) {
+                          parentElement.classList.remove('last-slide-active');
+                  
+                          if (swiper.activeIndex >= swiper.slides.length - swiper.params.slidesPerView) {
+                            parentElement.classList.add('last-slide-active');
+                          }
+                        }
+                      }
+                  
+                    }
                 });
                 new swiper_core_Swiper(".promotions__slider", {
                     modules: [ Navigation, Pagination ],
@@ -9403,6 +9433,7 @@ document.addEventListener('DOMContentLoaded', validateForm);
                     observer: true,
                     observeParents: true,
                     slidesPerView: 2,
+                    slidesPerGroup: 2,
                     spaceBetween: 16,
                     speed: 800,
                     navigation: {
@@ -9412,18 +9443,22 @@ document.addEventListener('DOMContentLoaded', validateForm);
                     breakpoints: {
                         320: {
                             slidesPerView: 1.1,
+                            slidesPerGroup: 1.1,
                             spaceBetween: 12
                         },
                         768: {
                             slidesPerView: 2,
+                            slidesPerGroup: 2,
                             spaceBetween: 16
                         },
                         992: {
                             slidesPerView: 2,
+                            slidesPerGroup: 2,
                             spaceBetween: 16
                         },
                         1200: {
                             slidesPerView: 2,
+                            slidesPerGroup: 2,
                             spaceBetween: 16
                         }
                     },
@@ -9459,6 +9494,50 @@ document.addEventListener('DOMContentLoaded', validateForm);
                         }
                     },
                     on: {}
+                });
+                new swiper_core_Swiper(".how-it-works__slider", {
+                  modules: [Navigation, Pagination],
+                  observer: true,
+                  observeParents: true,
+                  slidesPerView: 3,
+                  spaceBetween: 16,
+                  speed: 800,
+                  navigation: {
+                    prevEl: ".how-it-works .swiper-button-prev",
+                    nextEl: ".how-it-works .swiper-button-next"
+                  },
+                  pagination: {
+                    el: ".how-it-works .swiper-pagination",
+                    clickable: true
+                  },
+                  breakpoints: {
+                    320: {
+                      slidesPerView: 1.1,
+                      spaceBetween: 12
+                    },
+                    520: {
+                      slidesPerView: 2,
+                      spaceBetween: 16
+                    },
+                    992: {
+                      slidesPerView: 2.2,
+                      spaceBetween: 16
+                    }
+                  },
+                  on: {
+                    slideChange: function () {
+                      const swiper = this;
+                      const parentElement = swiper.el.closest('.how-it-works');
+                
+                      if (parentElement) {
+                        parentElement.classList.remove('last-slide-active');
+                
+                        if (swiper.activeIndex >= swiper.slides.length - swiper.params.slidesPerView) {
+                          parentElement.classList.add('last-slide-active');
+                        }
+                      }
+                    }
+                  }
                 });
                 new swiper_core_Swiper(".hero-inner__slider", {
                     modules: [ Navigation, Pagination, Autoplay, EffectCreative ],
@@ -9526,33 +9605,7 @@ document.addEventListener('DOMContentLoaded', validateForm);
                         },
                         on: {}
                     });
-                    new swiper_core_Swiper(".how-it-works__slider", {
-                        modules: [ Navigation, Pagination ],
-                        observer: true,
-                        observeParents: true,
-                        slidesPerView: 3,
-                        spaceBetween: 16,
-                        speed: 800,
-                        pagination: {
-                            el: ".how-it-works .swiper-pagination",
-                            clickable: true
-                        },
-                        breakpoints: {
-                            320: {
-                                slidesPerView: 1.1,
-                                spaceBetween: 12
-                            },
-                            520: {
-                                slidesPerView: 2,
-                                spaceBetween: 16
-                            },
-                            992: {
-                                slidesPerView: 3,
-                                spaceBetween: 16
-                            }
-                        },
-                        on: {}
-                    });
+             
                     new swiper_core_Swiper(".benefits__slider", {
                         modules: [ Navigation, Pagination ],
                         observer: true,

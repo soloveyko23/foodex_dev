@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,9 +126,16 @@
 			align-items: center;
 			background-color: #33CC99;
 		}
-
+    .fls-preloader::before {
+      content: '';
+      display: block;
+      inset: 0;
+      z-index: 2;
+      position: absolute;
+      background: linear-gradient(0deg, rgba(51,204,153,1) 0%, rgba(51,204,153,0) 50%, rgba(51,204,153,1) 100%);
+    }
 		.icon svg path {
-			fill: #222725;
+			fill: #313835;
 		}
 
 		.fls-preloader-logo {
@@ -141,6 +148,10 @@
 			width: 40vw;
 			height: auto;
 		}
+
+    .fls-preloader-logo svg path {
+      fill: #313835;
+    }
 
 		.fls-preloader-line {
 			position: absolute;
@@ -429,11 +440,11 @@
 									Що таке <span>FOODEX?</span>
 								</h2>
 							</div>
-							<div class="main-text text-black/65">
+							<!-- <div class="main-text text-black/65">
 								<p>
 									22 програми харчування з детально порахованими ккал та БЖВ лікарем-дієтологом, професійна команда кухарів, турботливі клієнт-менеджери та моторні кур’єри
 								</p>
-							</div>
+							</div> -->
 						</div>
 						<div class="why-we__body">
 							<div class="why-we__video video-block video-block-lg video-block-preview" data-popup="#popupVideo" data-popup-youtube="s2gg5h2t0d4">
@@ -762,14 +773,14 @@
 				<div class="get-in-touch__wrapper">
 					<div class="get-in-touch__container">
 						<div class="get-in-touch__content text-center">
-							<h2 class="h2 get-in-touch__title mb-4 text-white">
+							<h2 class="h2 get-in-touch__title text-white">
 								Отримайте правильне харчування та заощаджуйте свій час
 							</h2>
-							<div class="main-text text-white">
+							<!-- <div class="main-text text-white">
 								<p>
 									Lorem ipsum dolor sit amet consectetur. Ullamcorper tristique iaculis volutpat cras augue tempor purus sollicitudin. Lectus.
 								</p>
-							</div>
+							</div> -->
 							<a href="#" class="button button-lg button-green md:mt-8 mt-2">Замовити зі знижкою</a>
 						</div>
 					</div>
@@ -779,18 +790,30 @@
 			<section class="how-it-works section-margin-bottom">
 				<div class="how-it-works__container">
 					<div class="how-it-works__content">
-						<div class="how-it-works__header relative md:mb-8 mb-6" data-prlx-parent="">
+						<div class="how-it-works__header flex items-center justify-between gap-4 relative md:mb-8 mb-6" data-prlx-parent="">
 							<div class="overflow-hidden">
 								<h2 class="h2 section-title mb-3">
 									Як працює <span>FOODEX?</span>
 								</h2>
 							</div>
-							<div class="main-text text-black/65 md:max-w-[25.9375rem]">
+              <div class="slider-navigation-1" data-da=".how-it-works__navigation-mob, 992">
+                <button type="button" class="slider-button-1 swiper-button-prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                    <path d="M9 17.0068L1 9.00684L9 1.00684" stroke="#222725" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <button type="button" class="slider-button-1 swiper-button-next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                    <path d="M1 17.0068L9 9.00684L1 1.00684" stroke="#222725" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+              </div>
+							<!-- <div class="main-text text-black/65 md:max-w-[25.9375rem]">
 								<p>
 									Ми пропонуємо ідеальний баланс якості продуктів, ціни та сервісу. А страви готуємо з дотриманням вимог HACCP
 								</p>
-							</div>
-							<div class="how-it-works__parallax-item" data-coefficient="-100" data-direction="1" data-prlx="">
+							</div> -->
+							<!-- <div class="how-it-works__parallax-item" data-coefficient="-100" data-direction="1" data-prlx="">
 								<svg xmlns="http://www.w3.org/2000/svg" width="104" height="92" viewBox="0 0 104 92" fill="none">
 									<g clip-path="url(#clip0_2170_6140)">
 										<path d="M52.0614 0.00683594C20.1013 0.00683594 0 18.3167 0 46.0068C0 73.6969 20.1101 92.0068 52.0614 92.0068C84.0128 92.0068 104 73.7058 104 46.0068C104 18.3079 84.0128 0.00683594 52.0614 0.00683594ZM67.4139 24.5525C69.5733 24.5525 71.3288 28.8098 71.3288 34.074C71.3288 39.3382 69.5733 43.5955 67.4139 43.5955C65.2546 43.5955 63.499 39.3382 63.499 34.074C63.499 28.8098 65.2546 24.5525 67.4139 24.5525ZM36.5949 24.5525C38.7542 24.5525 40.5098 28.8098 40.5098 34.074C40.5098 39.3382 38.7542 43.5955 36.5949 43.5955C34.4355 43.5955 32.6799 39.3382 32.6799 34.074C32.6799 28.8098 34.4355 24.5525 36.5949 24.5525ZM52.0614 74.0679C37.9905 74.0679 28.2471 67.099 25.0608 55.1574C28.0277 58.7434 35.1114 63.0184 52 63.0184C68.8886 63.0184 75.8406 58.8759 78.9041 55.3252C75.709 67.1697 66.0709 74.0679 52.0614 74.0679Z" fill="#33CC99" />
@@ -804,7 +827,9 @@
 										</clipPath>
 									</defs>
 								</svg>
-							</div>
+							</div> -->
+
+
 						</div>
 						<div class="how-it-works__content">
 							<div class="how-it-works__slider swiper">
@@ -902,6 +927,9 @@
 									<div class="swiper-pagination"></div>
 								</div>
 							</div>
+              <div class="how-it-works__navigation-mob lg:hidden mt-4 slider-navigation-mob flex items-center justify-center">
+
+              </div>
 						</div>
 					</div>
 				</div>
@@ -922,15 +950,15 @@
 								</p>
 							</div>
 							<div class="overflow-hidden">
-								<h2 class="h2 section-title mb-3 !text-white">
+								<h2 class="h2 section-title !text-white">
 									Програми харчування
 								</h2>
 							</div>
-							<div class="main-text text-white/65 md:max-w-[27.1875rem]">
+							<!-- <div class="main-text text-white/65 md:max-w-[27.1875rem]">
 								<p>
 									Щодня на вас чекає різноманітне унікальне меню, яке не повторюється протягом 18 днів.
 								</p>
-							</div>
+							</div> -->
 						</div>
 						<div class="programs-main__body">
 							<div class="programs-main__type mb-3">
@@ -956,14 +984,14 @@
 							<div class="programs-main__table table-programs">
 								<div class="table-programs__row row" data-prlx-parent="">
 									<div class="row-block max-w-[35.9375rem]">
-										<h4 class="h4 text-white mb-2">
+										<h4 class="h4 text-white">
 											Програма харчування для схуднення
 										</h4>
-										<div class="main-text text-white/55">
+										<!-- <div class="main-text text-white/55">
 											<p>
 												Lorem ipsum dolor sit amet consectetur. Ullamcorper tristique iaculis volutpat cras augue tempor purus sollicitudin. Lectus.
 											</p>
-										</div>
+										</div> -->
 									</div>
 									<div class="row__parallax-item" data-coefficient="-100" data-direction="1" data-prlx="">
 										<svg xmlns="http://www.w3.org/2000/svg" width="105" height="92" viewBox="0 0 105 92" fill="none">
@@ -1372,7 +1400,7 @@
 										</button>
 									</div>
 									<div class="dish-schedule__footer flex items-center justify-center mt-5">
-										<a href="#" class="button button-green button-lg !text-black2">Обрати план харчування<span class="sm:!inline !hidden">для схуднення</span></a>
+										<a href="#" class="button button-green button-lg !gap-1">Обрати план харчування<span class="sm:!inline !hidden">для схуднення</span></a>
 									</div>
 								</div>
 							</div>
@@ -1395,7 +1423,6 @@
 									<button type="button" class="tabs__title _tab-active">Текcтові відгуки</button>
 									<button type="button" class="tabs__title">Відео відгуки</button>
 									<button type="button" class="tabs__title">Розпаковки</button>
-									<button type="button" class="tabs__title">Відгуки з соц. мереж</button>
 								</nav>
 								<div class="slider-navigation-1" data-da=".review__navigation-mob, 992">
 									<button type="button" class="slider-button-1 swiper-button-prev">
@@ -1585,87 +1612,6 @@
 												<div class="review__content">
 													<div class="subheading mb-1">
 														2Lorem ipsum dolor sit.
-													</div>
-													<div class="description">
-														Lorem ipsum dolor sit amet consectetur.
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="reviews__slide swiper-slide review" data-popup="#popupVideo" data-popup-youtube="s2gg5h2t0d4">
-											<div class="review__body">
-												<div class="review__preview  video-block video-block-md video-block-preview">
-													<img src="https://picsum.photos/id/200/700/300" alt="Image">
-												</div>
-												<div class="review__content">
-													<div class="subheading mb-1">
-														Lorem ipsum dolor sit.
-													</div>
-													<div class="description">
-														Lorem ipsum dolor sit amet consectetur.
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="reviews__slide swiper-slide review" data-popup="#popupVideo" data-popup-youtube="s2gg5h2t0d4">
-											<div class="review__body">
-												<div class="review__preview  video-block video-block-md video-block-preview">
-													<img src="https://picsum.photos/id/100/700/1100" alt="Image">
-												</div>
-												<div class="review__content">
-													<div class="subheading mb-1">
-														Lorem ipsum dolor sit.
-													</div>
-													<div class="description">
-														Lorem ipsum dolor sit amet consectetur.
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="reviews__slide swiper-slide review" data-popup="#popupVideo" data-popup-youtube="s2gg5h2t0d4">
-											<div class="review__body">
-												<div class="review__preview  video-block video-block-md video-block-preview">
-													<img src="https://picsum.photos/id/102/700/1100" alt="Image">
-												</div>
-												<div class="review__content">
-													<div class="subheading mb-1">
-														Lorem ipsum dolor sit.
-													</div>
-													<div class="description">
-														Lorem ipsum dolor sit amet consectetur.
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="reviews__slide swiper-slide review" data-popup="#popupVideo" data-popup-youtube="s2gg5h2t0d4">
-											<div class="review__body">
-												<div class="review__preview  video-block video-block-md video-block-preview">
-													<img src="https://picsum.photos/id/145/700/1100" alt="Image">
-												</div>
-												<div class="review__content">
-													<div class="subheading mb-1">
-														Lorem ipsum dolor sit.
-													</div>
-													<div class="description">
-														Lorem ipsum dolor sit amet consectetur.
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="reviews__tab">
-								<div class="reviews__slider swiper">
-									<div class="reviews__wrapper swiper-wrapper">
-										<div class="reviews__slide swiper-slide review" data-popup="#popupVideo" data-popup-youtube="s2gg5h2t0d4">
-											<div class="review__body">
-												<div class="review__preview  video-block video-block-md video-block-preview">
-													<img src="https://picsum.photos/seed/picsum/1920/800" alt="Image">
-												</div>
-												<div class="review__content">
-													<div class="subheading mb-1">
-														3Lorem ipsum dolor sit.
 													</div>
 													<div class="description">
 														Lorem ipsum dolor sit amet consectetur.
@@ -2517,6 +2463,29 @@
 													</svg>
 												</a>
 											</li>
+                      <li>
+                        <a href="#">
+                         
+
+<svg fill="#ffffff" width="38" height="38" viewBox="-153.6 -153.6 819.20 819.20" id="icons" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="matrix(1, 0, 0, 1, 0, 0)">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0">
+
+<rect x="-153.6" y="-153.6" width="819.20" height="819.20" rx="409.6" fill="#33CC99" strokewidth="0"/>
+
+</g>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier">
+
+<path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"/>
+
+</g>
+
+</svg>
+                        </a>
+                      </li>
 										</ul>
 									</div>
 								</div>
@@ -2987,7 +2956,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js?_v=20240514100757"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?_v=20240514100757"></script>
-	<script src="js/app.js"></script>
+	<script src="js/app.min.js"></script>
 </body>
 
 </html>

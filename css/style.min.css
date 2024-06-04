@@ -10,7 +10,7 @@
 
 @media (max-width: 1600px) and (min-width: 992px){
     :root {
-      font-size: 9px;
+      font-size: 11px;
     }
     .header__actions i {
       width: auto;

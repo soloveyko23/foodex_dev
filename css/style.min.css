@@ -3185,7 +3185,7 @@ ol li::before {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  z-index: 4;
+  z-index: 20;
 }
 .button-to-top .slider-button-1 {
   background-color: var(--green);
@@ -4798,10 +4798,7 @@ ol li::before {
   pointer-events: none;
 }
 @media (min-width:100rem) {
-  .reviews:not(.reviews-about) .reviews__slider {
-    width: calc(100vw - (100vw - 1270px)/ 2);
-    padding-right: 1rem
-  }
+ 
   .reviews__slider {
     position: relative;
   }
@@ -4811,10 +4808,10 @@ ol li::before {
   .reviews__slider::before {
     content: "";
     position: absolute;
-    right: 0;
+    right: 0rem;
     top: 0;
     width: 5rem;
-    z-index: 5;
+    z-index: 10;
     height: 100%;
     transition: all 0.3s;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
@@ -4822,23 +4819,20 @@ ol li::before {
   }
 }
 @media (max-width:100rem) and (min-width: 75em) {
-  .reviews:not(.reviews-about) .reviews__slider {
-    width: calc(100vw - (100vw - 61vw)/ 2);
-    padding-right: 1rem
-  }
+
   .reviews__slider {
     position: relative;
   }
   .reviews__slider::before {
     content: "";
     position: absolute;
-    right: 0;
+    right: 0rem;
     top: 0;
     width: 10rem;
-    z-index: 5;
+    z-index: 10;
     height: 100%;
     transition: all 0.3s;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%);
 
   }
 }
@@ -7887,7 +7881,7 @@ ol li::before {
   background-color: #fff;
   border-radius: 10px;
   padding: .25rem;
-  z-index: 10;
+  z-index: 20;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 @media (max-width: 768px){

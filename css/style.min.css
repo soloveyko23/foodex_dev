@@ -43,6 +43,15 @@
       max-width: 20%;
       height: auto;
     }
+    .header__menu ul > li > a {
+      font-size: 1.125rem !important;
+    }
+    .location-block__button {
+      font-size: 1.125rem !important;
+    }
+    .language-block ul li a {
+      font-size: 1.125rem !important;
+    }
     .button-to-top .slider-button-1  {
       width: 5rem;
       height: 5rem;

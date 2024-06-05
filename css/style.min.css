@@ -12,6 +12,18 @@
     :root {
       font-size: 11px;
     }
+    .form-line-input .form__label {
+      left: 4.9rem!important
+    }
+    .form__col-wrap._form-error .form__label {
+      top: 32px !important;
+    }
+    .iti__selected-country {
+      height: 58px !important;
+    }
+    .form-line-input .iti._form-error ~ .form__label {
+      top: 30px !important;
+    }
     .header__actions i {
       width: auto;
       height: auto;
@@ -7833,7 +7845,7 @@ ol li::before {
   transition: all 0.3s;
   transform: translateX(100%);
   opacity: 0;
-  top: 20%;
+  bottom: 12%;
   right: 1rem;
   width: 18.75rem;
   height: 25rem;

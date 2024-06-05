@@ -43,8 +43,12 @@
       max-width: 20%;
       height: auto;
     }
+    .button-to-top .slider-button-1  {
+      width: 5rem;
+      height: 5rem;
+    }
     .button-to-top .slider-button-1 svg {
-      max-width: 30%;
+      max-width: 35%;
     }
     .slider-button-2 svg {
       max-width: 20%;
@@ -1290,7 +1294,8 @@ h5 {
   }
 }
 .location-block {
-  position: relative
+  position: relative;
+  display: flex;
 }
 .location-block__button {
   display: inline-flex;

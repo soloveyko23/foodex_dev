@@ -4371,16 +4371,18 @@ ol li::before {
 .how-it-works__slider {
   position: relative;
 }
-.how-it-works__slider::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 10rem;
-  z-index: 5;
-  height: 100%;
-  transition: all 0.3s;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+@media (min-width: 768px){
+  .how-it-works__slider::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10rem;
+    z-index: 5;
+    height: 100%;
+    transition: all 0.3s;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  }
 }
 .how-it-works.last-slide-active .how-it-works__slider::before {
   content: "";
@@ -4803,6 +4805,9 @@ ol li::before {
   .reviews__slider {
     position: relative;
   }
+
+}
+@media (min-width:768px){
   .reviews__slider::before {
     content: "";
     position: absolute;
@@ -4820,6 +4825,21 @@ ol li::before {
   .reviews:not(.reviews-about) .reviews__slider {
     width: calc(100vw - (100vw - 61vw)/ 2);
     padding-right: 1rem
+  }
+  .reviews__slider {
+    position: relative;
+  }
+  .reviews__slider::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10rem;
+    z-index: 5;
+    height: 100%;
+    transition: all 0.3s;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+
   }
 }
 @media (max-width:29.99875em) {
@@ -7869,6 +7889,18 @@ ol li::before {
   padding: .25rem;
   z-index: 10;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+@media (max-width: 768px){
+    .additional-video {
+      width: 12rem;
+      height: 18rem;
+    }
+}
+@media (max-width: 480px){
+  .additional-video {
+    width: 6rem;
+    height: 8rem;
+  }
 }
 .additional-video.show {
   transform: translateX(0);

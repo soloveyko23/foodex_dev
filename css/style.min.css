@@ -6073,14 +6073,14 @@ ol li::before {
 }
 .delivery-block__row .row__image-wrap {
   position: sticky;
-  top: 20vw;
+  top: 10px;
 }
-@media (max-width:1600px){
+/* @media (max-width:1600px){
   .delivery-block__row .row__image-wrap {
 
   top: 50%;
 }
-}
+} */
 .delivery-block__row .row__image img {
   max-width: 100%;
   width: 100%;
@@ -6089,16 +6089,16 @@ ol li::before {
 }
 @media (min-width:81.25em) {
   .delivery-block__row .row__image img {
-    height: 31.5625rem
+    height: 52.5625rem
   }
 }
 @media (min-width:23.4375em) and (max-width:81.25em) {
-  @supports (height:clamp(15.625rem ,9.1638513514rem + 27.5675675676vw ,31.5625rem)) {
+  @supports (height:clamp(15.625rem ,9.1638513514rem + 27.5675675676vw ,52.5625rem)) {
     .delivery-block__row .row__image img {
-      height: clamp(15.625rem ,9.1638513514rem + 27.5675675676vw ,31.5625rem)
+      height: clamp(15.625rem ,9.1638513514rem + 27.5675675676vw ,52.5625rem)
     }
   }
-  @supports not (height:clamp(15.625rem ,9.1638513514rem + 27.5675675676vw ,31.5625rem)) {
+  @supports not (height:clamp(15.625rem ,9.1638513514rem + 27.5675675676vw ,52.5625rem)) {
     .delivery-block__row .row__image img {
       height: calc(15.625rem + 15.9375 * (100vw - 23.4375rem)/ 57.8125)
     }

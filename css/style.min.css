@@ -12,17 +12,17 @@
     :root {
       font-size: 11px;
     }
-    .form-line-input .form__label {
+    .faq .form-line-input .form__label {
       left: 4.9rem!important
     }
-    .form__col-wrap._form-error .form__label {
+    .faq .form__col-wrap._form-error .form__label {
       top: 32px !important;
     }
-    .iti__selected-country {
-      height: 58px !important;
+    .faq .iti__selected-country {
+      height: 39px !important;
     }
-    .form-line-input .iti._form-error ~ .form__label {
-      top: 30px !important;
+    .faq .form-line-input .iti._form-error ~ .form__label {
+      top: 20px !important;
     }
     .header__actions i {
       width: auto;
